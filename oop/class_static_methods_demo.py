@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+"""
+A Python module demonstrating the difference between
+class methods and static methods using a Calculator class.
+"""
+
+class Calculator:
+    """A simple Calculator class showcasing static and class methods."""
+
+    # Class attribute
+    calculation_type = "Arithmetic Operations"
+
+    @staticmethod
+    def add(a: float, b: float) -> float:
+        """
+        Static method that returns the sum of two numbers.
+        Args:
+            a (float): The first number.
+            b (float): The second number.
+        Returns:
+            float: The sum of a and b.
+        """
+        return a + b
+
+    @classmethod
+    def multiply(cls, a: float, b: float) -> float:
+        """
+        Class method that returns the product of two numbers.
+        Prints the class attribute 'calculation_type' before performing the multiplication.
+        Args:
+            a (float): The first number.
+            b (float): The second number.
+        Returns:
+            float: The product of a and b.
+        """
+        print(f"Calculation type: {cls.calculation_type}")
+        return a * b
